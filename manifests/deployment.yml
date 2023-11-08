@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: girishshetmicrosoftpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: girishshetmicrosoftpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: girishshetmicrosoftpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: girishshetmicrosoftpipelinesjavascriptdocker 
+          image: myycontainerregistry2.azurecr.io/girishshetmicrosoftpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
